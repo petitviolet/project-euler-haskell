@@ -1,0 +1,15 @@
+### https://raw.github.com/github/gitignore/2544a6b71027a1832e01f5c7f78bdfcea727f4ec/haskell.gitignore
+
+dist
+cabal-dev
+*.o
+*.hi
+*.chi
+*.chs.h
+.virthualenv
+.hsenv
+.cabal-sandbox/
+cabal.sandbox.config
+cabal.config
+
+
