@@ -9,3 +9,6 @@ sqSum n = sq $ sum [1..n]
 
 answerQ6 :: Int
 answerQ6 = sqSum 100 - sumSq 100
+
+main = do
+    print answerQ6

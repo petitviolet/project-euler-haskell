@@ -8,5 +8,11 @@ canBeDevided n x
 
 canBeDevidedTo20 n = canBeDevided n 20
 
-answerQ5 :: Maybe Int
-answerQ5 = findFirst canBeDevidedTo20 [380,760..]
+extractFromJust :: Maybe a -> a
+extractFromJust (Just x) = x
+
+answerQ5 :: Int
+answerQ5 = extractFromJust $ findFirst canBeDevidedTo20 [380,760..]
+
+main = do
+    print answerQ5

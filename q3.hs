@@ -8,3 +8,6 @@ extPrimeFactor n = pf : extPrimeFactor (n `div` pf) where
 
 answerQ3 :: Integer
 answerQ3 = maximum $ extPrimeFactor 600851475143
+
+main = do
+    print answerQ3

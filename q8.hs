@@ -31,3 +31,6 @@ parse = map $ read . return
 
 answerQ8 :: Int
 answerQ8 = maximum $ map product $ map parse $ extractAdjacents 13 target
+
+main = do
+    print answerQ8

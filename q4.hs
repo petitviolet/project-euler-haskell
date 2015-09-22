@@ -8,3 +8,6 @@ twoDigits = [product [x, y] |
 
 answerQ4 :: Int
 answerQ4 = maximum $ filter isPalindromic twoDigits
+
+main = do
+    print answerQ4

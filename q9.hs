@@ -11,3 +11,6 @@ tripletSumTo n = [[x, y, z] |
 
 answerQ9 :: Int
 answerQ9 = product $ tripletSumTo 1000 !! 0
+
+main = do
+    print answerQ9
