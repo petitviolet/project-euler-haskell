@@ -12,10 +12,10 @@ primes = f[2..] where
 
 -- http://jutememo.blogspot.jp/2008/10/3-python-haskell.html
 
-data Sieve = Sieve { list :: [Int], tail :: Sieve }
+data Sieve = Sieve { list :: [Integer], tail :: Sieve }
            | Empty deriving Show
 
-sieveByHead :: [Int] -> [Int]
+sieveByHead :: [Integer] -> [Integer]
 sieveByHead [] = []
 sieveByHead (x:xs)
   | abs x == 1 = [x]
@@ -25,9 +25,9 @@ sieve :: Sieve -> Sieve
 sieve (Sieve [] _) = Empty
 sieve (Sieve xs s) = Sieve xs (sieve $ Sieve (sieveByHead xs) s)
 
-sievingPrimes :: Sieve -> [Int]
+sievingPrimes :: Sieve -> [Integer]
 sievingPrimes Empty = []
 sievingPrimes (Sieve (x:_) s) = x : (sievingPrimes s)
 
-sievedPrimes :: [Int]
+sievedPrimes :: [Integer]
 sievedPrimes = sievingPrimes $ sieve $ Sieve [2..] Empty
